@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Prashant Kumar, a BS-MS research student at IISER Kolkata.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Prashant Kumar | Portfolio</title>
+
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="global.css" class="css">
+    <link rel="icon" type="image/svg+xml" href="assets/dna-logo.svg" sizes="32x32">
+</head>
+
+<body>
+    <!-- ============ nav_bar ========= -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <div class="avatar" id="menuToggle">
+                        <img src="assets/dna-logo.svg" alt="dna-logo">
+                    </div>
+                    <div class="name-title">
+                        <span class="my-name">Prashant Kumar</span>
+                        <span class="title">@ IISER-K</span>
+                    </div>
+                </div>
+
+                <div class="nav-links" id="navLinks">
+                    <span class="close-btn" id="closeBtn">&times;</span>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <section class="projects-hero">
+        <h1>My Projects</h1>
+        <p>Here's the collection of Projects I created, including Academic and Tech-related stuffs. Some are serious
+            ones, others are just my mind's curiosity.</p>
+    </section>
+
+    <div class="filter-buttons">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="tech">Tech Projects</button>
+        <button data-filter="academic">Academic Projects</button>
+    </div>
+
+    <!-- Project Cards -->
+    <section class="projects-grid">
+
+        <!-- Frontend Mentor Projects -->
+        <div class="project-card" data-category="tech">
+            <div class="project-image">
+                <img src="assets/frontend-mentor.png" alt="Frontend Mentor Projects">
+            </div>
+            <div class="project-description">
+                <div class="project-header">
+                    <h3>Frontend Mentor Projects</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/scaram0uche-128/Frontend-Mentor-Projects" target="_blank"
+                            class="project-link" aria-label="GitHub Repo">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.frontendmentor.io/profile/scaram0uche-128" target="_blank"
+                            class="project-link" aria-label="Frontend Mentor Profile">
+                            <i class="fa-solid fa-code"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-technologies">
+                    <span class="tech-pill html-css">HTML</span>
+                    <span class="tech-pill html-css">CSS</span>
+                    <span class="tech-pill js">JavaScript</span>
+                </div>
+                <hr>
+                <p>
+                    Here's the collection of Frontend Web Development Project I did while learning. This is from the
+                    platform, <strong>Frontend Mentor</strong>, where developers can practice and improve their frontend
+                    web development
+                    skills.
+                </p>
+            </div>
+        </div>
+
+        <!-- Portfolio Website -->
+        <div class="project-card" data-category="tech">
+            <div class="project-image">
+                <img src="assets/my-portfolio.png" alt="Portfolio Website">
+            </div>
+            <div class="project-description">
+                <div class="project-header">
+                    <h3>Portfolio Website</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/scaram0uche-128/my_portfolio" target="_blank" class="project-link"
+                            aria-label="GitHub Repo">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-technologies">
+                    <span class="tech-pill html-css">HTML</span>
+                    <span class="tech-pill html-css">CSS</span>
+                    <span class="tech-pill js">JavaScript</span>
+                </div>
+                <hr>
+                <p>
+                    This is my personal portfolio website I designed to put all my work in one place. A basic static
+                    website created with HTML, CSS and JavaScript.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <h4>Email:</h4>
+                <p>Personal - <a href="mailto:prashantk32@proton.me">prashantk32@proton.me</a></p>
+                <p>Academic - <a href="mailto:prashantk.research@gmail.com">prashantk.research@gmail.com</a></p>
+                <p>Institute - <a href="mailto:pk25ms004@iiserkol.ac.in">pk25ms004@iiserkol.ac.in</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Socials</h4>
+                <p><a href="https://github.com/scaram0uche-128" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-github"></i> GitHub</a></p>
+                <p><a href="https://www.linkedin.com/in/prashant-k128/" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-linkedin"></i> LinkedIn</a></p>
+                <p><a href="https://www.frontendmentor.io/profile/scaram0uche-128" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-solid fa-code"></i> Frontend Mentor</a></p>
+            </div>
+
+            <div class="footer-section copyright">
+                <p>© 2025 | Prashant Kumar</p>
+                <p>Proudly built by hand.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

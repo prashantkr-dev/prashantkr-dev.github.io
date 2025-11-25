@@ -1,0 +1,300 @@
+/* ================= BASE ================= */
+:root {
+  --bg-color: #f5f5f5;
+  --bg-alt-color: #f3f3f3;
+  --text-color: #374151;
+  --text-dark: #222;
+  --heading-color: #000;
+  --accent-color: #2563eb;
+  --border-color: #ddd;
+  --white: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-color: rgba(0, 0, 0, 0.5);
+  --link-hover-color: #1d4ed8;
+  --footer-link-color: rgb(108, 0, 0);
+  --font-family: 'Montserrat', sans-serif;
+  --card-bg: #fff;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--bg-alt-color);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.3;
+}
+
+p {
+  line-height: 1.6;
+}
+
+
+/* ================= HERO ================= */
+.projects-hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #fff;
+}
+
+.projects-hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: .6rem;
+}
+
+.projects-hero p {
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* ================= FILTER BUTTONS ================= */
+.filter-buttons {
+  text-align: center;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-family: var(--font-family);
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background: var(--accent-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.filter-buttons button:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* ================= PROJECT CARDS ================= */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.project-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform .3s, box-shadow .3s;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  flex: 1;
+  max-width: 45%;
+  min-width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.02);
+}
+
+.project-description {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.project-header h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--heading-color);
+}
+
+.project-links {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.project-links a {
+  color: var(--text-dark);
+  font-size: 1.3rem;
+  transition: color 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tech-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  background-color: var(--accent-color);
+  /* Default color */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Specific colors for tech pills if desired, otherwise default to accent */
+.tech-pill.python {
+  background-color: #3776ab;
+}
+
+.tech-pill.js {
+  background-color: #f7df1e;
+  color: #000;
+}
+
+.tech-pill.html-css {
+  background-color: #e34c26;
+}
+
+.tech-pill.react {
+  background-color: #61dafb;
+  color: #000;
+}
+
+.tech-pill.flutter {
+  background-color: #02569b;
+}
+
+.tech-pill.swift {
+  background-color: #F05138;
+}
+
+.tech-pill.swiftui {
+  background-color: #007AFF;
+}
+
+.tech-pill.dart {
+  background-color: #0175C2;
+}
+
+.tech-pill.cpp {
+  background-color: #00599C;
+}
+
+.tech-pill.playwright {
+  background-color: #2EAD33;
+}
+
+.tech-pill.flask {
+  background-color: #000;
+}
+
+.tech-pill.scikit-learn {
+  background-color: #F7931E;
+}
+
+
+.project-card hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-image {
+    max-width: 100%;
+    min-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .projects-hero {
+    padding: 2rem 1rem;
+  }
+
+  .projects-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .projects-grid {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .filter-buttons button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}

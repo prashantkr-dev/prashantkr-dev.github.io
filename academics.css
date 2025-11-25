@@ -1,0 +1,162 @@
+ * {
+     box-sizing: border-box;
+ }
+
+ html,
+ body {
+     margin: 0;
+     font-family: "Montserrat", sans-serif;
+     background: #f3f3f3;
+     color: #222;
+     overflow-x: hidden;
+ }
+
+ .parallax {
+     width: 100%;
+     min-height: 45vh;
+     background-image: url("assets/iiser-kolkata.jpg");
+     background-size: cover;
+     background-position: center center;
+     background-attachment: fixed;
+     position: relative;
+ }
+
+ .parallax::after {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: linear-gradient(to bottom, rgba(0, 0, 0, .15), rgba(0, 0, 0, .15));
+ }
+
+ @media (max-width: 768px) {
+     .parallax {
+         background-image: url("assets/iiser-kolkata-mobile.jpg");
+         background-position: center center;
+         background-size: cover;
+         background-attachment: scroll;
+     }
+ }
+
+ .timeline-section {
+     padding: 4rem 1rem;
+     text-align: center;
+ }
+
+ .timeline-section h2 {
+     font-size: 2rem;
+     margin-bottom: 2rem;
+     color: #0a0a0a;
+ }
+
+ .timeline {
+     max-width: 1100px;
+     margin: 0 auto;
+     padding: 2.5rem 1rem;
+     position: relative;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 2rem;
+ }
+
+ .timeline::before {
+     content: "";
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 50%;
+     height: 2px;
+     background: #bdbdbd;
+     transform: translateY(-50%);
+ }
+
+ .timeline-item {
+     position: relative;
+     text-align: center;
+     padding: 3.6rem 1rem 3rem;
+ }
+
+ .timeline-item h3 {
+     margin: 0 0 2.2rem;
+     font-size: 1.05rem;
+     font-weight: 700;
+ }
+
+ .timeline-item .year {
+     display: block;
+     margin: 1.1rem 0 .2rem;
+     font-weight: 800;
+     color: #00897b;
+ }
+
+ .timeline-item .detail {
+     margin: 0;
+     font-style: italic;
+     color: #555;
+ }
+
+ .timeline-item .dot {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 14px;
+     height: 14px;
+     background: #0a8f7a;
+     border-radius: 50%;
+     transform: translate(-50%, -50%);
+     box-shadow: 0 0 0 3px rgba(10, 143, 122, 0.12);
+ }
+
+ @media (max-width: 900px) {
+     .timeline {
+         display: block;
+         padding: 2rem 0;
+     }
+
+     .timeline::before {
+         top: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 2px;
+         height: 100%;
+     }
+
+     .timeline-item {
+         padding: 2.4rem 1rem 2.2rem;
+         max-width: 480px;
+         margin: 0 auto 2rem;
+     }
+
+     .timeline-item .dot {
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+     }
+ }
+
+ .achievements {
+     background: var(--white);
+     padding: 3.5rem 1rem;
+ }
+
+ .achievements h2 {
+     text-align: center;
+     margin: 0 0 1.8rem;
+     font-size: 1.9rem;
+ }
+
+ .achievements ul {
+     list-style: none;
+     padding: 0;
+     margin: 0 auto;
+     max-width: 900px;
+ }
+
+ .achievements li {
+     background: var(--bg-color);
+     margin: .9rem 0;
+     padding: 1rem 1.2rem;
+     border-left: 5px solid #00897b;
+     border-radius: 8px;
+     line-height: 1.6;
+     font-size: 1.03rem;
+ }
