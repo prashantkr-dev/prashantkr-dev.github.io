@@ -12,7 +12,7 @@
   --overlay-color: rgba(0, 0, 0, 0.5);
   --link-hover-color: #1d4ed8;
   --footer-link-color: rgb(108, 0, 0);
-  --font-family: 'Montserrat', sans-serif;
+  --font-family: "Montserrat", sans-serif;
   --card-bg: #fff;
   --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -40,8 +40,6 @@ p {
   line-height: 1.6;
 }
 
-
-/* ================= HERO ================= */
 .projects-hero {
   text-align: center;
   padding: 3rem 1rem;
@@ -50,7 +48,7 @@ p {
 
 .projects-hero h1 {
   font-size: 2.2rem;
-  margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
 }
 
 .projects-hero p {
@@ -107,18 +105,33 @@ p {
 .project-card {
   background: #fff;
   padding: 1.5rem;
+  margin-bottom: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: transform .3s, box-shadow .3s;
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
   align-items: flex-start;
+
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 1000px;
+  overflow: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease,
+    margin 0.4s ease, padding 0.4s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.project-card.hide {
+  opacity: 0;
+  transform: translateY(20px);
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
 }
 
 .project-image {
@@ -190,63 +203,34 @@ p {
   border-radius: 20px;
   font-size: 0.75rem;
   font-weight: 600;
-  color: white;
-  background-color: var(--accent-color);
-  /* Default color */
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color: #fff;
 }
 
-/* Specific colors for tech pills if desired, otherwise default to accent */
-.tech-pill.python {
-  background-color: #3776ab;
+/* colors for language tags */
+.tech-pill.html {
+  background-color: #e34c26;
 }
-
+.tech-pill.css {
+  background-color: #264de4;
+}
+.tech-pill.javascript,
 .tech-pill.js {
   background-color: #f7df1e;
   color: #000;
 }
-
-.tech-pill.html-css {
-  background-color: #e34c26;
+.tech-pill.python {
+  background-color: #3776ab;
 }
-
 .tech-pill.react {
   background-color: #61dafb;
   color: #000;
 }
-
-.tech-pill.flutter {
-  background-color: #02569b;
-}
-
-.tech-pill.swift {
-  background-color: #F05138;
-}
-
-.tech-pill.swiftui {
-  background-color: #007AFF;
-}
-
-.tech-pill.dart {
-  background-color: #0175C2;
-}
-
-.tech-pill.cpp {
-  background-color: #00599C;
-}
-
-.tech-pill.playwright {
-  background-color: #2EAD33;
-}
-
-.tech-pill.flask {
-  background-color: #000;
-}
-
 .tech-pill.scikit-learn {
-  background-color: #F7931E;
+  background-color: #f7931e;
 }
+
 
 
 .project-card hr {
@@ -262,7 +246,9 @@ p {
   margin: 0;
 }
 
-/* Responsive adjustments */
+
+
+/* Responsiveness */
 @media (max-width: 768px) {
   .project-card {
     flex-direction: column;

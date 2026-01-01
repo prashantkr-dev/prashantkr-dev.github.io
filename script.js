@@ -13,26 +13,57 @@ menuToggle.addEventListener("click", toggleMenu);
 overlay.addEventListener("click", toggleMenu);
 closeBtn.addEventListener("click", toggleMenu);
 
+// Experience Section
+const experiences = [
+  {
+    title: "Frontend Developer",
+    company: "Singularity (Astronomy Club of IISER-K)",
+    date: "September 2025 - Present",
+    description: "Built few major pages for the club's official website.",
+    links: [
+      { label: "GitHub", url: "https://github.com/thushi308/singularity" },
+      { label: "Live Demo", url: "https://thushi308.github.io/singularity/" },
+    ],
+  },
+];
 
+const experienceList = document.getElementById("experience-list");
 
-// For the Projects page:
-const filterButtons = document.querySelectorAll('.filter-buttons button');
-const projectCards = document.querySelectorAll('.project-card');
+function renderExperiences() {
+  experienceList.innerHTML = "";
 
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    filterButtons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
+  experiences.forEach((exp) => {
+    const card = document.createElement("div");
+    card.className = "experience-card";
 
-    const filterValue = button.getAttribute('data-filter');
+    let linksHTML = "";
+    if (exp.links && exp.links.length > 0) {
+      linksHTML = `
+        <div class="experience-links">
+          ${exp.links
+            .map(
+              (link) =>
+                `<a href="${link.url}" target="_blank" rel="noopener noreferrer">
+                  ${link.label}
+                </a>`
+            )
+            .join("")}
+        </div>
+      `;
+    }
 
-    projectCards.forEach(card => {
-      if (filterValue === "all" || card.getAttribute('data-category') === filterValue) {
-        card.style.display = "flex";
-      } else {
-        card.style.display = "none";
-      }
-    });
+    card.innerHTML = `
+      <div class="experience-title">${exp.title}</div>
+      <div class="experience-company">${exp.company}</div>
+      <div class="experience-date">${exp.date}</div>
+      <div class="experience-desc">${exp.description}</div>
+      ${linksHTML}
+    `;
+
+    experienceList.appendChild(card);
   });
+}
 
-});
+renderExperiences();
+
+
