@@ -59,6 +59,21 @@ Pages designed by me: Gallery, Blog, and Events.`,
       },
     ],
   },
+    {
+    title: "Modelling 1D groundwater flow equation",
+    category: "academic",
+    img: "assets/1d_flow_eq.png",
+    description:
+      "Simulated the 1D groundwater flow equation for stead-state condition. With the rainfall recharge factor.",
+    technologies: ["Python", "NumPy", "MatplotLib"],
+    links: [
+      {
+        href: "https://github.com/prashantkr-dev/hydrogeology_projects",
+        icon: "fa-brands fa-github",
+        label: "GitHub Repo",
+      }
+    ],
+  },
 
   //   {
   //     title: "",

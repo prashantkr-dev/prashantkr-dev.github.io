@@ -16,10 +16,15 @@ closeBtn.addEventListener("click", toggleMenu);
 // Experience Section
 const experiences = [
   {
-    title: "Frontend Developer",
+    title: "Frontend Developer, Volunteer",
     company: "Singularity (Astronomy Club of IISER-K)",
-    date: "September 2025 - Present",
-    description: "Built few pages for the club's official website.",
+    date: "September 2025 - March 2026",
+    description: `
+    <ul>
+      <li>Helped building the club's official website.
+      <li>Managed club events and observational sessions.
+    </ul>
+    `,
     links: [
       { label: "GitHub", url: "https://github.com/thushi308/singularity" },
       { label: "Live Demo", url: "https://thushi308.github.io/singularity/" },
